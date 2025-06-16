@@ -53,8 +53,8 @@ npx hardhat run scripts/admin.ts owner_pause_bank
 - Renounce their roles
 - The Default Admin(owner) can change ownership to a new address.
 - Re-configure bank key parameters if they have such privileges <br>
-<br>
-**FeeCollector.sol**
+
+**FeeCollector.sol** <br>
 - Receives and holds ether
 - Can Send Interest to the Bank Contract for interest payouts
 - Admins have access for sensitive operations
