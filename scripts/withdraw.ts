@@ -2,18 +2,17 @@ import {ethers} from "hardhat";
 import * as dotenv from "dotenv";
 import * as BankJson from "../artifacts/contracts/Bank.sol/Bank.json";
 import * as FeeCollectorJson from "../artifacts/contracts/FeeCollector.sol/FeeCollector.json";
+import fs from "fs";
 dotenv.config();
 
 const{
   PRIVATE_KEY,
   TEST_PRIVATE_KEY,
   TEST_PRIVATE_KEY2,
-  INFURA_API_URL,
-  BANK_CONTRACT_ADDRESS,
-  FEE_COLLECTOR_CONTRACT_ADDRESS
+  INFURA_API_URL
 } = process.env;
 
-if (!PRIVATE_KEY || !TEST_PRIVATE_KEY || !TEST_PRIVATE_KEY2 || !INFURA_API_URL || !BANK_CONTRACT_ADDRESS || !FEE_COLLECTOR_CONTRACT_ADDRESS) {
+if (!PRIVATE_KEY || !TEST_PRIVATE_KEY || !TEST_PRIVATE_KEY2 || !INFURA_API_URL) {
   throw new Error("Missing required environment variables. Check the dot env file.");
 }
 
@@ -28,8 +27,9 @@ const ownerWallet = new ethers.Wallet(PRIVATE_KEY!, provider);
 const testWallet1 = new ethers.Wallet(TEST_PRIVATE_KEY!, provider);
 const testWallet2 = new ethers.Wallet(TEST_PRIVATE_KEY2!, provider);
 
-const feeCollectorAddress = FEE_COLLECTOR_CONTRACT_ADDRESS!;
-const bankAddress = BANK_CONTRACT_ADDRESS!;
+const deployments = JSON.parse(fs.readFileSync("deployments.json", "utf8"));
+const bankAddress = deployments["sepolia"]["Bank"];
+const feeCollectorAddress = deployments["sepolia"]["FeeCollector"];
 
 // Owner instance connection to the bank contract
 const ownerWalletConnectBank = new ethers.Contract(bankAddress, BankJson.abi, ownerWallet);

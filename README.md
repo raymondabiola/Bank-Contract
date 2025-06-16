@@ -29,8 +29,6 @@ npm install
 - TEST_PRIVATE_KEY = test_wallet_1_private_key
 - TEST_PRIVATE_KEY2 = test_wallet_2_private_key
 - INFURA_API_URL = https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID
-- BANK_CONTRACT_ADDRESS = deployed_bank_contract_address
-- FEE_COLLECTOR_CONTRACT_ADDRESS = deployed_fee_collector_contract_address
 
 **Run Tests Command** <br>
 npx hardhat test

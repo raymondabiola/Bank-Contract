@@ -7,7 +7,7 @@ async function main(){
 
     const feeCollector = await FeeCollector.deploy(dustThreshold);
     await feeCollector.waitForDeployment();
-    console.log(`Fee Collector contract deployed to ${await feeCollector.getAddress()}`);
+    console.log(`Fee Collector contract deployed to: ${await feeCollector.getAddress()}`);
 
     const feeCollectorAddress = await feeCollector.getAddress();
     const interestRatePerAnnum = 6n;
