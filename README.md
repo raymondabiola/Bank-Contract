@@ -33,7 +33,7 @@ npm install
 **Run Tests Command** <br>
 npx hardhat test
 
-**Run Scripts Commands**
+**Run Scripts Commands examples**
 - deposit 1 eth using test wallet 1 <br>
 npx hardhat run scripts/deposit.ts test_wallet1_deposit 1 <br>
 
@@ -52,9 +52,9 @@ npx hardhat run scripts/admin.ts owner_pause_bank
 - Revoke roles for subordinates
 - Renounce their roles
 - The Default Admin(owner) can change ownership to a new address.
-- Re-configure bank key parameters if they have such privileges
-
-## FeeCollector.sol
+- Re-configure bank key parameters if they have such privileges <br>
+<br>
+**FeeCollector.sol**
 - Receives and holds ether
 - Can Send Interest to the Bank Contract for interest payouts
 - Admins have access for sensitive operations
