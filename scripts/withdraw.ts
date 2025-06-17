@@ -137,7 +137,7 @@ default: {
   console.error("owner_wallet_withdrawAll");
   console.error("owner_wallet_withdraw_from_feeCollector");
   console.error("owner_wallet_withdrawAll_from_feeCollector");
-  console.error("Usage Example: npx hardhat run scripts/withdraw.ts <valid case>");
+  console.error("Usage Example: npx hardhat run scripts/withdraw.ts <valid case> <argAmount - if required>");
 }
 }
 }
