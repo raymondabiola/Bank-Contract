@@ -80,7 +80,7 @@ default: {
   console.error("Unknown command. Please use any of the valid cases below:");
   console.error("owner_wallet_deposit");
     console.error("test_wallet1_deposit");
-   console.error("Usage Example: npx hardhat run scripts/deposit.ts <valid case>");
+   console.error("Usage Example: npx hardhat run scripts/deposit.ts <valid case> <argAmount>");
 }
 }
 }
