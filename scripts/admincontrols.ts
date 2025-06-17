@@ -178,7 +178,7 @@ default: {
   console.error("owner_set_new_deposit_fee_percent");
   console.error("owner_set_new_dust_threshold");
   console.error("owner_set_new_dust_threshold_fee_collector");
-  console.error("Usage Example: npx hardhat run scripts/admincontrol.ts <valid case>");
+  console.error("Usage Example: npx hardhat run scripts/admincontrol.ts <valid case> <argAmount- if required>");
 }
 }
 }
