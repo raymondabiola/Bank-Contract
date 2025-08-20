@@ -125,4 +125,4 @@ $ npx hardhat run scripts/withdraw.ts owner_wallet_withdrawAll_from_feeCollector
 
 ## Author
 Built with 🤍 by Raymond Abiola <br>
-Feel free to follow my Github account or fork this repo for learning and testing.
+Feel free to [follow my Github account](https://github.com/raymondabiola) or fork this repo for learning and testing.
